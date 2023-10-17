@@ -5,10 +5,10 @@ class Usuario{
     {'nome':'Maria','senha':'senha'},
   ];
 
-String? verifica(String senha){
+String? verifica(String? senha){
     for (var item in cliente) {
       if(item['senha']==senha){
-        return item['senha'];
+        return item['nome'];
       }
   }
   return null;
