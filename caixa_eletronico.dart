@@ -26,8 +26,22 @@ class caixa_eletronico{
     print("Saldo Poupança: \$$saldoP");
   }
 
-  void transfer (int valor){
-
+  void transferCCtoP (int valor){
+    if(valor>saldoCC){
+      print("Saldo insuficiente");
+    }else{
+      saldoCC-=valor;
+      saldoP+=valor;
+    }
+  }
+  
+  void transferPtoCC (int valor){
+    if(valor>saldoP){
+      print("Saldo insuficiente");
+    }else{
+      saldoP-=valor;
+      saldoCC+=valor;
+    }
   }
 
 }
