@@ -5,12 +5,17 @@ class caixa_eletronico{
   Usuario p;
   caixa_eletronico(this.saldoCC,this.saldoP,this.p);
 
-  void depositoCC (int valor){
 
+  void depositoCC (int valor){
+    saldoCC+=valor;
   }
 
   void saqueCC (int valor){
-
+    if(valor>saldoCC){
+      print("Saldo insuficiente");
+    }else{
+    saldoCC-=valor;
+    }
   }
 
   void consultaCC (){
@@ -21,7 +26,7 @@ class caixa_eletronico{
     print("Saldo Poupança: \$$saldoP");
   }
 
-  void transfer (){
+  void transfer (int valor){
 
   }
 
