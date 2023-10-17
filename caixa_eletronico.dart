@@ -5,16 +5,24 @@ class caixa_eletronico{
   Usuario p;
   caixa_eletronico(this.saldoCC,this.saldoP,this.p);
 
-  void deposito (){
+  void depositoCC (int valor){
 
   }
 
-  void saque (){
+  void saqueCC (int valor){
 
   }
 
-  void entrar(){
-    
+  void consultaCC (){
+    print("Saldo conta corrente: \$$saldoCC");
+  }
+
+  void consultaP (){
+    print("Saldo Poupança: \$$saldoP");
+  }
+
+  void transfer (){
+
   }
 
 }
