@@ -23,7 +23,8 @@ int main (){
     print("4- Consultar saldo na poupança");
     print("5- Transferir da conta corrente para poupança");
     print("6- Transferir da poupança para conta corrente");
-    print("7- Sair");
+    print("7- Alterar senha");
+    print("8- Sair");
 
     int op = int.parse(stdin.readLineSync()!);
     int valor;
@@ -48,8 +49,14 @@ int main (){
         print("Digite o valor que deseja transferir:");
         valor = int.parse(stdin.readLineSync()!);
         caixa.transferPtoCC(valor);
+      case 7:
+        print("Confirme sua senha:");
+        String senha = stdin.readLineSync()!;
+        print("Digite sua nova senha:");
+        String novasenha = stdin.readLineSync()!;
+        usu.altera(senha,novasenha);
     }
-    if(op==7){
+    if(op==8){
       break;
     }
   }

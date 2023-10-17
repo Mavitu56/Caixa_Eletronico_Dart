@@ -15,12 +15,19 @@ String? verifica(String? senha){
 }
 
 void altera(String senha,String novasenha){
+  int ok=0;
   for (var item in cliente) {
       if(item['senha']==senha){
         item['senha']=novasenha;
-        print(item['senha']);
+      }else{
+        ok++;
       }
 }
+
+if(ok==3){
+  print("Senha atual incorreta");
+}
+
 }
 
 }
