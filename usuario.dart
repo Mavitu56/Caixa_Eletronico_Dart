@@ -14,4 +14,13 @@ String? verifica(String? senha){
   return null;
 }
 
+void altera(String senha,String novasenha){
+  for (var item in cliente) {
+      if(item['senha']==senha){
+        item['senha']=novasenha;
+        print(item['senha']);
+      }
+}
+}
+
 }
